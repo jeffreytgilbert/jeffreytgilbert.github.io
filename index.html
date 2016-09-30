@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body,html{
+  padding: 0;
+}
+
+body{
+  margin: 0 auto;
+  font-family: arial;
+}
+
+.pick-list {
+  position: relative;
+  height: 800px;
+  width: 700px;
+  margin: 200px auto;
+  -webkit-perspective: 500;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition-property: perspective;
+  -webkit-transition-duration: 0.5s; 
+}
+
+.banner {
+  display:inline;
+
+  width: 200px;
+  height: 500px;
+
+  float:left;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #eeeeee;
+  border:30px solid #dddddd;
+  -webkit-transition-duration: 0.5s;
+}
+
+.panel {
+  width: 160px;
+  margin: 0;
+  padding: 10px;
+
+  border:10px inset #eee;
+  background-color: #ddd;
+}
+
+.title {
+  height: 180px;
+}
+
+.description {
+  height: 240px;
+}
+
+.push {
+  position: absolute;
+  color: #fff;
+  padding: 1px 2px 0 2px;
+  border: 2px outset #ccc;
+  background-color: #666;
+  -webkit-transform: rotate(90deg);
+  top: 210px;
+  left: 192px;
+}
+
+.left {
+  -webkit-transform: translateZ(30px) rotateY(0deg);
+}
+
+.right {
+  -webkit-transform: translateZ(30px) rotateY(0deg);
+}
+
+.left:hover {
+  -webkit-transform: rotateY(7deg);
+}
+
+.right:hover {
+  -webkit-transform: rotateY(7deg);
+}
+
+
+.banner:hover {
+  -webkit-perspective: 5000;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="pick-list">
+
+  <div class="banner left" onclick="javascript:location.href='java.html'">
+    <div class="title panel">Java Tutorial</div>
+    <div class="description panel">Get started with Java and drop some serious knowledge on your friends in the most verbose way possible.</div>
+    <div class="push">PUSH</div>
+  </div>
+
+  <div style="width:100px;float:left;">&nbsp;</div>
+
+  <div class="banner right" onclick="javascript:location.href='javascript.html'">
+    <div class="title panel">Javascript Tutorial</div>
+    <div class="description panel">Take the short path down the long road of functional programming and prototypal inheritance, and maybe learn a few node tricks along the way.</div>
+    <div class="push">PUSH</div>
+  </div>
+
+</div>
+
+</body>
+</html>
